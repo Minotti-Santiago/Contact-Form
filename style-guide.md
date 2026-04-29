@@ -13,15 +13,15 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Green 200 (lighter): hsl(148, 38%, 91%)
-- Green 600 (medium): hsl(169, 82%, 27%)
-- Red: hsl(0, 66%, 54%)
+- Green 200 (lighter): #dff1e7
+- Green 600 (medium): #0c7d69
+- Red: #d73c3c
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
-- Grey 500 (medium): hsl(186, 15%, 59%)
-- Grey 900 (darker): hsl(187, 24%, 22%)
+- White: #ffffff
+- Grey 500 (medium): #87a3a6
+- Grey 900 (darker): #2b4246
 
 ## Typography
 

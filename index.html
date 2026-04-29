@@ -2,51 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Contact Us
+<main>
+  <section class="contact-section">
+    <div class="max-content">
+      <div class="contact-container">
+        <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+        <form id="contactForm" class="contact-form" method="POST">
+          <div  class="input-container input-container--first-name">
+            <label for="firstName">First Name <span class="asterisk">*</span></label>
 
-  Last Name
-  This field is required
+            <input id="firstName" type="text" name="name1" required>
+            <p class="error-message">This field is required</p>
+          </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+          <div class="input-container input-container--last-name">
+            <label for="lastName">Last Name <span class="asterisk">*</span></label>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+            <input id="lastName" type="text" name="name2" required>
+            <p class="error-message">This field is required</p>
+          </div>
 
-  Message
-  This field is required
+          <div class="input-container input-container--email">
+            <label for="email">Email Address <span class="asterisk">*</span></label>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+            <input autocomplete="on" id="email" type="email" name="email" required>
+            <p class="error-message">Please enter a valid email address</p>
+            
+          </div>
 
-  Submit
+          <div class="Query-type-container">
+            <p>Query Type <span class="asterisk">*</span></p>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
+              <div class="checkboxes-container">
+                <div class="queryType1">
+                  <input  type="checkbox" id="generalEnquiry" name="queryType1">
+                  <label class="query-label" for="generalEnquiry">General Enquiry</label>
+                </div>
+
+                <div class="queryType2">
+                  <input type="checkbox" id="supportRequest" name="queryType2">
+                  <label class="query-label" for="supportRequest">Support Request</label>
+                </div>
+                
+              </div>
+
+            <p class="error-query-type">Please select a query type</p>
+          </div>
+
+          <div class="message-container message-container--textarea">
+            <label for="message">Message <span class="asterisk">*</span></label>
+            <textarea required aria-required="true" class="textarea" name="message" id="message"></textarea>
+            <p class="error-textarea">This field is required</p>
+          </div>
+          
+          <div class="checkbox-container checkbox-container--consent">
+            <div class="checkbox-consent">
+              <input required type="checkbox" id="consentCheckbox" name="consent">
+              <label class="consent-label" for="consentCheckbox">I consent to being contacted by the team <span class="asterisk">*</span></label>
+            </div>
+              <p class="error-consent">To submit this form, please consent to being contacted</p>
+          </div>
+
+          <button id="submit" class="submit" type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="thanks" id="thanks">
+        <h2>Message Sent!</h2>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </div>
+  </section>
+</main>
+
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Minotti-Santiago" target="_blank">Minotti Santiago</a>.
   </footer>
+
+  <script src="./main.js"></script>
 </body>
 </html>
