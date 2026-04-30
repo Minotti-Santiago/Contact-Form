@@ -1,4 +1,3 @@
-const submitBtn = document.getElementById('submit')
 const form = document.getElementById('contactForm')
 const thanks = document.getElementById('thanks')
 const inputs = document.querySelectorAll('#contactForm input')
@@ -33,7 +32,6 @@ const validForm = (e) => {
                 errorMessages[1].classList.remove('active')
                 inputs[1].classList.add('valid')
             }
-        break
         break
         case 'email':
             if(e.target.value.trim() === '' || !e.target.value.includes('@') ||  !e.target.value.includes('.')){
