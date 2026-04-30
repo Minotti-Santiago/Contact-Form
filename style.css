@@ -269,3 +269,31 @@ input:focus, input:hover{
 
 .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: var(--color-blue); }
+
+/*--------------------------------- Responsive ---------------------------------*/
+
+@media screen and (max-width:768px){
+    .contact-section{
+        padding: 0 2rem;
+    }
+
+    .contact-form{
+        grid-template-areas: 
+        'firstName'
+        'lastName'
+        'email'
+        'queryType'
+        'message'
+        'consent'
+        'submit'
+        ;
+    }
+
+    .checkboxes-container{
+        flex-direction: column;
+    }
+
+    .thanks{
+        width: 90%;
+    }
+}
